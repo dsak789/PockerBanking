@@ -2,6 +2,6 @@ from dayBank import DayBank
 from auth import PBAuthentication
 import datetime
 
-PBAuthentication()
-DayBank(date=datetime.datetime.now())
- 
+if PBAuthentication().loginCheck():
+    DayBank(date=datetime.datetime.now())
+
